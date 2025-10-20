@@ -24,7 +24,12 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
   overflow: visible;
   box-sizing: content-box;
 }
-
+/*
+SVG significa Scalable Vector Graphics (Gráficos Vetoriais Escaláveis). É um formato de imagem baseado em XML usado para descrever imagens vetoriais — como ícones, logotipos, formas geométricas, gráficos
+O trecho acima seleciona elementos <svg> que não são o :root do documento (ou seja, que não são o elemento <html>) e que têm a classe svg-inline--fa (classe usada pelo Font Awesome para ícones SVG inline);
+e seleciona <svg> que não são o :host (isto é, que não são o elemento host de um Web Component) e também têm a classe svg-inline--fa.
+Juntos, esses dois seletores garantem que a regra CSS se aplique a todos os ícones Font Awesome em SVG, tanto dentro quanto fora de Web Components, mas não ao elemento raiz ou host.
+*/
 .svg-inline--fa {
   display: var(--fa-display, inline-block);
   height: 1em;
