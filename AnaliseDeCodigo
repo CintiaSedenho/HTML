@@ -33,6 +33,10 @@ __id=AW-XXXXXXXX__ : Esse é o ID de rastreamento do Google Ads (AW = AdWords). 
 Esse ID vincula o script à sua conta e permite rastrear conversões (ações do usuário) no site.
 __cx=c__
 Parâmetro técnico usado pelo Google, relacionado a configuração de contexto ou cache. 
-__gtm=XXXXXX__ : Esse é o ID do contêiner do Google Tag Manager.  (opcional dependendo da integração).Também deve ser substituído pelo ID real do seu GTM.
+__gtm=XXXXXX__ : Esse é o hash do ID do contêiner do Google Tag Manager.  (opcional dependendo da integração).Também deve ser substituído pelo ID real do seu GTM.
+
+<script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-XXXXXXX&amp;gtm_auth=&amp;gtm_preview=&amp;gtm_cookies_win=x"></script>
+__gtm.js__ 
+Esse é o arquivo principal do Google Tag Manager, usado para carregar todas as tags configuradas em seu contêiner do GTM.
 
 
