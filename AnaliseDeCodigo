@@ -1,0 +1,38 @@
+<script async="" src="//www.gstatic.com/call-tracking/call-tracking_9.js" nonce="null"></script>
+
+__async=""__
+Esse atributo diz ao navegador para carregar o script de forma assíncrona, ou seja:
+Ele será carregado em paralelo com o restante da página.
+Assim que o script terminar de carregar, ele será executado imediatamente.
+Isso evita bloqueios no carregamento da página (melhora performance).
+
+__gstatic__
+O domínio gstatic é usado pelo google para hospedar conteúdo estático como imagens, arquivos Javascript e CSS.
+
+__call-tracking__
+O script call-tracking_9.js faz parte do sistema ca call tracking do Google Ads.
+O call tracking é uma tecnologia que permite identificar quais campanhas de marketing estão gerando ligações para sua empresa, ajudando a mensurar o retorno sobre o investimento (ROI) de cada canal.
+Ao atribuir números de telefone exclusivos para cada campanha, é possível saber de onde vêm os leads e otimizar os investimentos em mídia.
+
+__nonce__
+nonce é uma medida de segurança usada em Content Security Policy (CSP).
+Ele permite que apenas scripts com um valor de nonce específico sejam executados.
+Aqui, o valor "null" parece incorreto ou é um placeholder — isso pode indicar um erro de configuração.
+Normalmente, o valor de nonce deve ser um hash gerado dinamicamente pelo servidor, por exemplo: nonce="abc123".
+
+<script type="text/javascript" async="" src="https://www.gstatic.com/wcm/loader.js"></script>
+__wcm__
+Web Content Management Systems – WCMS, Sistema de Gerenciamento de Conteúdo Web
+Aqui wcm/loader carrega o script com a lógica que permite ao Google detectar se o visitante veio de um anúncio do Google Ads; 
+Converte o numero do site por um número de encaminhamento do Google;
+Rastreia este número e as conversões atribuidas ao Google.
+
+<script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/destination?id=AW-XXXXXXXX&amp;cx=c&amp;gtm=XXXXXX"></script>
+Esse script pertence ao Google Tag Manager e está relacionado ao Google Ads (gtag.js com destino específico para conversões).
+__id=AW-XXXXXXXX__ : Esse é o ID de rastreamento do Google Ads (AW = AdWords). Substitua XXXXXXXX pelo seu ID real.
+Esse ID vincula o script à sua conta e permite rastrear conversões (ações do usuário) no site.
+__cx=c__
+Parâmetro técnico usado pelo Google, relacionado a configuração de contexto ou cache. 
+__gtm=XXXXXX__ : Esse é o ID do contêiner do Google Tag Manager.  (opcional dependendo da integração).Também deve ser substituído pelo ID real do seu GTM.
+
+
