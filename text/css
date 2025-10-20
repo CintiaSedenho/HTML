@@ -31,15 +31,15 @@ e seleciona <svg> que não são o :host (isto é, que não são o elemento host 
 Juntos, esses dois seletores garantem que a regra CSS se aplique a todos os ícones Font Awesome em SVG, tanto dentro quanto fora de Web Components, mas não ao elemento raiz ou host.
 */
 .svg-inline--fa {
-  display: var(--fa-display, inline-block);
-  height: 1em;
+  display: var(--fa-display, inline-block); 
+  /* Define o tipo de exibição usando a variável --fa-display, se estiver definida, ou o valor padrão inline-block que permite que o ícone se comporte como um elemento inline, mas com as características de bloco (como controle de largura/altura). */ 
+  height: 1em; /*Define a altura do ícone como 1em — ou seja, igual ao tamanho da fonte ao redor. Isso faz com que o ícone se redimensione automaticamente conforme o texto.*/
   overflow: visible;
-  vertical-align: -0.125em;
+  vertical-align: -0.125em; /*Move o ícone ligeiramente para cima, pq os ícones SVG podem parecer um pouco "afundados" em relação ao texto. O valor -0.125em (ou -12.5% da altura da fonte) é uma correção fina para alinhar verticalmente com o texto vizinho.*/
 }
 .svg-inline--fa.fa-2xs {
   vertical-align: 0.1em;
 }
-.svg-inline--fa.fa-xs {
   vertical-align: 0em;
 }
 .svg-inline--fa.fa-sm {
