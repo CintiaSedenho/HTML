@@ -1,0 +1,13 @@
+✅ O que significa em no CSS?
+em é uma unidade de medida relativa em CSS, usada para definir tamanhos baseados na fonte atual.
+1em = 100% do tamanho da fonte atual.
+0.5em = 50% do tamanho da fonte.
+2em = 200% do tamanho da fonte.
+
+✅ O que é rem no CSS?
+rem significa "root em" — é uma unidade de medida relativa, assim como em, mas com uma diferença importante:
+
+🔁 Diferença entre em e rem
+Unidade	Base de cálculo
+em	Fonte do elemento atual ou pai
+rem	Fonte do elemento <html> (raiz)
