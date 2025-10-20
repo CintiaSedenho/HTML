@@ -28,3 +28,16 @@ w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
 As informações sobre o início da execução (gtm.start) é empurrado para ela.
 gtm.start registra o timestamp de início.
 event: 'gtm.js' indica que o carregamento do GTM começou.
+
+var f = d.getElementsByTagName(s)[0], // f é o primeiro <script> da página (usado como referência).
+    j = d.createElement(s), // j é um novo elemento <script> criado dinamicamente.
+    dl = l != 'dataLayer' ? '&l=' + l : ''; // dl adiciona o parâmetro &l=dataLayer se você estiver usando um nome de dataLayer diferente.
+
+j.async = true;
+j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl + '&gtm_auth=&gtm_preview=&gtm_cookies_win=x';
+O src define a URL do script do GTM, com parâmetros opcionais para preview/debug (aqui estão vazios).
+
+f.parentNode.insertBefore(j,f); // O novo script (j) é inserido antes do primeiro <script> existente na página (f).
+Isso garante que ele seja carregado e executado rapidamente.
+
+
