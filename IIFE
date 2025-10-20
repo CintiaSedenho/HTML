@@ -1,0 +1,30 @@
+
+<script>
+  (function(w,d,s,l,i){
+    w[l]=w[l]||[];
+    w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+    var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),
+        dl=l!='dataLayer'?'&l='+l:'';
+    j.async=true;
+    j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl+'&gtm_auth=&gtm_preview=&gtm_cookies_win=x';
+    f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXXXX');
+</script>
+
+✅ Função Autoexecutável (IIFE):
+(function(w,d,s,l,i){ ... })(window,document,'script','dataLayer','GTM-XXXXXXXX');
+
+É uma função anônima autoexecutável (IIFE = Immediately Invoked Function Expression).
+Ela é chamada imediatamente com os seguintes parâmetros:
+w: window
+d: document
+s: 'script'
+l: 'dataLayer' (nome da camada de dados)
+i: 'GTM-XXXXXXXX' (ID do contêiner GTM)
+
+w[l] = w[l] || []; //Se a dataLayer ainda não existir, ela é inicializada como um array.
+w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'}); 
+As informações sobre o início da execução (gtm.start) é empurrado para ela.
+gtm.start registra o timestamp de início.
+event: 'gtm.js' indica que o carregamento do GTM começou.
