@@ -6,7 +6,7 @@ Content-Security-Policy: script-src 'nonce-abc123';
 2 - No atributo nonce das tags <script> autorizadas:
 <script nonce="abc123">...</script>
 
-Atenção:
+⚠️ Atenção:
 Se o valor do nonce no cabeçalho bater com o valor do nonce na tag <script>, o navegador permitirá que esse script seja executado. Caso contrário, será bloqueado.
 "null" não é um valor válido de nonce gerado dinamicamente.
 Usar nonce="null" normalmente não autoriza nada, a não ser que a política CSP tenha sido mal configurada para aceitar 'nonce-null', o que seria um risco de segurança.
