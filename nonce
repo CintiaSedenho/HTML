@@ -1,0 +1,18 @@
+✅ O que é nonce?
+nonce (abreviação de number used once) é um atributo de segurança que serve para permitir a execução de scripts inline ou externos autorizados dinamicamente quando uma política de Cloud Service Provider (CSP) está sendo usada.
+Quando um servidor define uma política CSP, ele pode bloquear a execução de scripts que não sejam explicitamente autorizados. Para autorizar scripts específicos, ele pode usar um nonce — um token único, gerado a cada requisição, que é inserido:
+1- No cabeçalho da política CSP, por exemplo:
+Content-Security-Policy: script-src 'nonce-abc123';
+2 - No atributo nonce das tags <script> autorizadas:
+<script nonce="abc123">...</script>
+
+Atenção:
+Se o valor do nonce no cabeçalho bater com o valor do nonce na tag <script>, o navegador permitirá que esse script seja executado. Caso contrário, será bloqueado.
+"null" não é um valor válido de nonce gerado dinamicamente.
+Usar nonce="null" normalmente não autoriza nada, a não ser que a política CSP tenha sido mal configurada para aceitar 'nonce-null', o que seria um risco de segurança.
+Em muitos casos, esse valor aparece porque o backend não injetou corretamente o valor do nonce gerado, e o código acabou caindo em um valor padrão ou nulo.
+
+Se você estiver desenvolvendo ou auditando o código, é recomendável:
+Verificar se há política CSP no seu servidor.
+Garantir que os nonce sejam gerados dinamicamente por requisição.
+Evitar valores fixos como "null" ou strings estáticas previsíveis.
