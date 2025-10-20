@@ -40,4 +40,7 @@ O src define a URL do script do GTM, com parâmetros opcionais para preview/debu
 f.parentNode.insertBefore(j,f); // O novo script (j) é inserido antes do primeiro <script> existente na página (f).
 Isso garante que ele seja carregado e executado rapidamente.
 
++'&gtm_auth=&gtm_preview=&gtm_cookies_win=x'
+⚠️ Sobre os parâmetros de debug: Esses parâmetros estão em branco, o que indica que o GTM não está em modo de visualização/debug. 
+Eles seriam preenchidos automaticamente se você estivesse usando o modo de pré-visualização do GTM para testar alterações antes de publicá-las.
 
